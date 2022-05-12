@@ -2,8 +2,7 @@
 Telegram bot for learning  
 
 ## Idea
-The main idea is demonstration ## Idea
-The main idea is to show how  I can  create real application, which can be used by someone else.
+The main idea is demonstration   how  I can  create real application, which can be used by someone else.
 
 ## MVP Scope
 As a user, I want to subscribe on group of posts and get notification via telegram-bot every time,
