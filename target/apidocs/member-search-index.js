@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"com.github.AleksandrSpencer.mtb","c":"MyTelegramBotApplication","l":"main(String[])","url":"main(java.lang.String[])"},{"p":"com.github.AleksandrSpencer.mtb","c":"MyTelegramBotApplication","l":"MyTelegramBotApplication()","url":"%3Cinit%3E()"}]
