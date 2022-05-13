@@ -1,4 +1,13 @@
+
 # Release Notes
+
+## 0.3.0-SNAPSHOT
+
+*   MTB-12: added deployment process to the project
+
+## 0.2.0-SNAPSHOT
+
+*   MTB-2: implemented Command Pattern for handling Telegram Bot commands
 
 
 
