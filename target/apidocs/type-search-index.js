@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.github.AleksandrSpencer.mtb.bot","l":"MyTelegramBot"},{"p":"com.github.AleksandrSpencer.mtb","l":"MyTelegramBotApplication"}]
