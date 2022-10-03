@@ -1,6 +1,11 @@
 
 # Release Notes
 
+
+## 0.4.0-SNAPSHOT
+
+*   MTB-4: added repository layer  to the project
+
 ## 0.3.0-SNAPSHOT
 
 *   MTB-12: added deployment process to the project

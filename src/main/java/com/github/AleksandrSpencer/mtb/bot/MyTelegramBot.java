@@ -2,12 +2,12 @@ package com.github.AleksandrSpencer.mtb.bot;
 
 import com.github.AleksandrSpencer.mtb.command.CommandContainer;
 import com.github.AleksandrSpencer.mtb.service.SendBotMessageServiceImpl;
+import com.github.AleksandrSpencer.mtb.service.TelegramUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
-
-
 import static com.github.AleksandrSpencer.mtb.command.CommandName.NO;
 
 
@@ -22,8 +22,10 @@ public class MyTelegramBot  extends TelegramLongPollingBot {
     private  String token;
 
     private final CommandContainer commandContainer;
-    public MyTelegramBot (){
-        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this));
+
+    @Autowired
+    public MyTelegramBot (TelegramUserService telegramUserService) {
+        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this), telegramUserService);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.github.AleksandrSpencer.mtb.command;
 
 
+import com.github.AleksandrSpencer.mtb.service.TelegramUserService;
 import org.junit.jupiter.api.DisplayName;
 
 import static com.github.AleksandrSpencer.mtb.command.CommandName.STOP;
@@ -21,6 +22,6 @@ public class StopCommandTest extends AbstractCommandTest{
 
     @Override
     Command getCommand() {
-        return new StopCommand(sendBotMessageService);
+        return new StopCommand(sendBotMessageService, telegramUserService);
     }
 }
