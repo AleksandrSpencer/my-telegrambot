@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -21,7 +21,7 @@
 	<url>https://github.com/AleksandrSpencer/my-telegrambot/</url>
 	<properties>
 		<java.version>11</java.version>
-<!--		<telegrambot.starter.version>5.0.1</telegrambot.starter.version>-->
+		<!--		<telegrambot.starter.version>5.0.1</telegrambot.starter.version>-->
 		<telegrambot.starter.version>6.0.1</telegrambot.starter.version>
 		<unirest.version>3.11.01</unirest.version>
 		<apache.commons.version>3.11</apache.commons.version>
@@ -90,87 +90,3 @@
 		</plugins>
 	</build>
 </project>
-
-<!--	<properties>-->
-<!--		<java.version>11</java.version>-->
-<!--		<maven.compiler.source>${java.version}</maven.compiler.source>-->
-<!--		<maven.compiler.target>${java.version}</maven.compiler.target>-->
-<!--		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-<!--		<source.plugin.version>3.2.1</source.plugin.version>-->
-<!--&lt;!&ndash;		<javadoc.plugin.version>3.0.0-M1</javadoc.plugin.version>&ndash;&gt;-->
-
-<!--	</properties>-->
-<!--	<dependencies>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter</artifactId>-->
-<!--		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-test</artifactId>-->
-<!--			<scope>test</scope>-->
-<!--		</dependency>-->
-
-<!--&lt;!&ndash;		<dependency>&ndash;&gt;-->
-<!--&lt;!&ndash;			<groupId>org.flywaydb</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;			<artifactId>flyway-core</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;		</dependency>&ndash;&gt;-->
-
-<!--&lt;!&ndash;		<dependency>&ndash;&gt;-->
-<!--&lt;!&ndash;			<groupId>mysql</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;			<artifactId>mysql-connector-java</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;			<scope>runtime</scope>&ndash;&gt;-->
-<!--&lt;!&ndash;		</dependency>&ndash;&gt;-->
-
-<!--		<dependency>-->
-<!--			<groupId>org.projectlombok</groupId>-->
-<!--			<artifactId>lombok</artifactId>-->
-<!--			<optional>true</optional>-->
-<!--		</dependency>-->
-
-<!--&lt;!&ndash;		<dependency>&ndash;&gt;-->
-<!--&lt;!&ndash;			<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;			<artifactId>spring-boot-starter-data-jpa</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;		</dependency>&ndash;&gt;-->
-
-<!--		<dependency>-->
-<!--			<groupId>org.telegram</groupId>-->
-<!--			<artifactId>telegrambots-spring-boot-starter</artifactId>-->
-<!--			<version>6.0.1</version>-->
-<!--		</dependency>-->
-<!--	</dependencies>-->
-
-<!--	<build>-->
-<!--		<plugins>-->
-<!--			<plugin>-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-source-plugin</artifactId>-->
-<!--				<version>${source.plugin.version}</version>-->
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<id>attach-sources</id>-->
-<!--						<goals>-->
-<!--							<goal>jar</goal>-->
-<!--						</goals>-->
-<!--					</execution>-->
-<!--				</executions>-->
-<!--			</plugin>-->
-<!--&lt;!&ndash;			<plugin>&ndash;&gt;-->
-<!--&lt;!&ndash;				<groupId>org.apache.maven.plugins</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;				<artifactId>maven-javadoc-plugin</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;				<version>${javadoc.plugin.version}</version>&ndash;&gt;-->
-
-<!--&lt;!&ndash;				<executions>&ndash;&gt;-->
-<!--&lt;!&ndash;					<execution>&ndash;&gt;-->
-<!--&lt;!&ndash;						<id>attach-javadocs</id>&ndash;&gt;-->
-<!--&lt;!&ndash;						<goals>&ndash;&gt;-->
-<!--&lt;!&ndash;							<goal>jar</goal>&ndash;&gt;-->
-<!--&lt;!&ndash;						</goals>&ndash;&gt;-->
-<!--&lt;!&ndash;					</execution>&ndash;&gt;-->
-<!--&lt;!&ndash;				</executions>&ndash;&gt;-->
-<!--&lt;!&ndash;			</plugin>&ndash;&gt;-->
-<!--		</plugins>-->
-<!--	</build>-->
-
-<!--</project>-->

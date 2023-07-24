@@ -6,6 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import static com.github.AleksandrSpencer.mtb.command.CommandName.START;
 import static com.github.AleksandrSpencer.mtb.command.StartCommand.START_MESSAGE;
 
+
 @DisplayName("Unit-level testing for StartCommand")
 public class StartCommandTest extends AbstractCommandTest{
     @Override
@@ -20,7 +21,7 @@ public class StartCommandTest extends AbstractCommandTest{
 
     @Override
     Command getCommand() {
-        return new StartCommand(sendBotMessageService);
+        return new StartCommand(sendBotMessageService, telegramUserService);
     }
 
 }
