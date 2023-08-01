@@ -1,6 +1,8 @@
 package com.github.AleksandrSpencer.mtb.command;
 
 
+import com.github.AleksandrSpencer.mtb.javarushclient.JavaRushGroupClient;
+import com.github.AleksandrSpencer.mtb.service.GroupSubService;
 import com.github.AleksandrSpencer.mtb.service.SendBotMessageService;
 import com.github.AleksandrSpencer.mtb.service.TelegramUserService;
 import org.junit.jupiter.api.Assertions;
@@ -21,7 +23,9 @@ class CommandContainerTest {
     public void init() {
         SendBotMessageService sendBotMessageService = Mockito.mock(SendBotMessageService.class);
         TelegramUserService telegramUserService = Mockito.mock(TelegramUserService.class);
-        commandContainer = new CommandContainer(sendBotMessageService, telegramUserService);
+        JavaRushGroupClient groupClient = Mockito.mock(JavaRushGroupClient.class);
+        GroupSubService groupSubService = Mockito.mock(GroupSubService.class);
+        commandContainer = new CommandContainer(sendBotMessageService, telegramUserService, groupClient, groupSubService);
     }
 
     @Test
