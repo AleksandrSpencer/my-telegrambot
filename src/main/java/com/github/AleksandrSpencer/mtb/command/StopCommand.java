@@ -4,6 +4,9 @@ import com.github.AleksandrSpencer.mtb.service.SendBotMessageService;
 import com.github.AleksandrSpencer.mtb.service.TelegramUserService;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
+/**
+ * Stop {@link Command}.
+ */
 public class StopCommand implements Command{
 
     private final SendBotMessageService sendBotMessageService;

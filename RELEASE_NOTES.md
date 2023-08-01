@@ -1,6 +1,15 @@
 
 # Release Notes
 
+## 0.5.0-SNAPSHOT
+
+*   MTB-4: added ability to subscribe on group
+*   MTB-5: added ability to get a list of group subscriptions.
+
+## 0.4.0-SNAPSHOT
+
+*   MTB-3: added repository layer.
+
 ## 0.3.0-SNAPSHOT
 
 *   MTB-12: added deployment process to the project

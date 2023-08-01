@@ -5,6 +5,9 @@ import com.github.AleksandrSpencer.mtb.service.TelegramUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
+/**
+ * Statistics {@link Command}.
+ */
 public class StatCommand implements Command{
     private final TelegramUserService telegramUserService;
     private final SendBotMessageService sendBotMessageService;
