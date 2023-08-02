@@ -1,6 +1,10 @@
 
 # Release Notes
 
+## 0.6.0-SNAPSHOT
+
+*   MTB-6: added the ability to delete group subscription.
+
 ## 0.5.0-SNAPSHOT
 
 *   MTB-4: added ability to subscribe on group
