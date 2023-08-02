@@ -44,7 +44,7 @@ public class ListGroupSubCommandTest {
 
         Update update = prepareUpdate(Long.valueOf(telegramUser.getChatId()), LIST_GROUP_SUB.getCommandName());
 
-        String collectedGroups = "Я нашел все подписки на группы: \n\n" +
+        String collectedGroups = "Я нашел все подписки на группы: \n\n " +
                 telegramUser.getGroupSubs().stream()
                         .map(it -> "Группа: " + it.getTitle() + " , ID = " + it.getId() + " \n")
                         .collect(Collectors.joining());

@@ -34,7 +34,7 @@ public class ListGroupSubCommand implements Command{
 
         String message;
         if(CollectionUtils.isEmpty(telegramUser.getGroupSubs())) {
-            message = "Пока нет подписок на группы. Чтобы добавить подписку напиши /addgroupsub ";
+            message = "Пока нет подписок на группы. Чтобы добавить подписку напиши /addGroupSub";
         } else {
             String collectedGroups = telegramUser.getGroupSubs().stream()
                     .map(it -> "Группа: " + it.getTitle() + " , ID = " + it.getId() + " \n")
@@ -43,7 +43,5 @@ public class ListGroupSubCommand implements Command{
         }
         sendBotMessageService.sendMessage(telegramUser.getChatId(), message);
     }
-
-
 
 }

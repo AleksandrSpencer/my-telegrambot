@@ -69,14 +69,14 @@ public class DeleteGroupSubCommand implements Command {
                 .orElseThrow(NotFoundException::new)
                 .getGroupSubs();
         if (CollectionUtils.isEmpty(groupSubs)) {
-            message = "Пока нет подписок на группы. Чтобы добавить подписку напиши /addgroupsub ";
+            message = "Пока нет подписок на группы. Чтобы добавить подписку напиши /addGroupSub";
         } else {
             String userGroupSubData = groupSubs.stream()
                     .map(group -> format("%s - %s \n", group.getTitle(), group.getId()))
                     .collect(Collectors.joining());
 
             message = String.format("Чтобы удалить подписку на группу - передай комадну вместе с ID группы. \n" +
-                    "Например: /deletegroupsub 16 \n\n" +
+                    "Например: /deleteGroupSub 16 \n\n" +
                     "я подготовил список всех групп, на которые ты подписан) \n\n" +
                     "имя группы - ID группы \n\n" +
                     "%s", userGroupSubData);
