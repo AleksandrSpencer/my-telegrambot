@@ -1,6 +1,13 @@
 
 # Release Notes
 
+
+## 0.8.0-SNAPSHOT
+
+* MTB-10: extended bot statistics for admins.
+
+
+
 ## 0.7.0-SNAPSHOT
 
 *   MTB-11: added ability to send notifications about new articles
