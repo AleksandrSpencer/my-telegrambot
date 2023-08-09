@@ -1,22 +1,51 @@
 package com.github.AleksandrSpencer.mtb.command;
 
-import static com.github.AleksandrSpencer.mtb.command.CommandName.STAT;
+import com.github.AleksandrSpencer.mtb.javarushclient.dto.GroupStatDTO;
+import com.github.AleksandrSpencer.mtb.javarushclient.dto.StatisticDTO;
+import com.github.AleksandrSpencer.mtb.service.SendBotMessageService;
+import com.github.AleksandrSpencer.mtb.service.StatisticsService;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
+import java.util.Collections;
+
+import static com.github.AleksandrSpencer.mtb.command.AbstractCommandTest.prepareUpdate;
 import static com.github.AleksandrSpencer.mtb.command.StatCommand.STAT_MESSAGE;
+import static java.lang.String.format;
+@DisplayName("Unit-level testing for StatCommand")
+public class StatCommandTest {
 
-public class StatCommandTest extends AbstractCommandTest{
+    private SendBotMessageService sendBotMessageService;
+    private StatisticsService statisticsService;
+    private Command statCommand;
 
-    @Override
-    String getCommandName() {
-        return STAT.getCommandName();
+    @BeforeEach
+    public void init() {
+        sendBotMessageService = Mockito.mock(SendBotMessageService.class);
+        statisticsService = Mockito.mock(StatisticsService.class);
+        statCommand = new StatCommand(sendBotMessageService, statisticsService);
     }
 
-    @Override
-    String getCommandMessage() {
-        return String.format(STAT_MESSAGE, 0);
+    @Test
+    public void shouldProperlySendMessage() {
+        //given
+        Long chatId = 1234567L;
+        GroupStatDTO groupDto = new GroupStatDTO(1, "group", 1);
+        StatisticDTO statisticDTO = new StatisticDTO(1, 1, Collections.singletonList(groupDto), 2.5);
+        Mockito.when(statisticsService.countBotStatistic())
+                .thenReturn(statisticDTO);
+
+        //when
+        statCommand.execute(prepareUpdate(chatId, CommandName.STAT.getCommandName()));
+
+        //then
+        Mockito.verify(sendBotMessageService).sendMessage(chatId.toString(), format(STAT_MESSAGE,
+                statisticDTO.getActiveUserCount(),
+                statisticDTO.getInactiveUserCount(),
+                statisticDTO.getAverageGroupCountByUser(),
+                format("%s (id = %s) - %s подписчиков", groupDto.getTitle(), groupDto.getId(), groupDto.getActiveUserCount())));
     }
 
-    @Override
-    Command getCommand() {
-        return new StatCommand(sendBotMessageService, telegramUserService);
-    }
 }
